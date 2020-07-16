@@ -11,7 +11,16 @@ module.exports = {
     author: "Me",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `brvcim3srt5a`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

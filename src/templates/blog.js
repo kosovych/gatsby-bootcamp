@@ -22,8 +22,6 @@ export const query = graphql`
 `;
 
 const BlogPost = (props) => {
-  
-  
   return (
     <Layout>
       <h1>{props.data.markdownRemark.frontmatter.title}</h1>
